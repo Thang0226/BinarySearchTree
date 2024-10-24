@@ -7,8 +7,9 @@ public class TestBST {
 		tree.insert("Peter");
 		tree.insert("Daniel");
 
-		System.out.println("Inorder traverse (sorted nodes): ");
+		System.out.println("Post-order traverse: ");
+		tree.postorder();
+		System.out.println("\nIn-order traverse: ");
 		tree.inorder();
-		System.out.println("\nThe number of nodes is: " + tree.getSize());
 	}
 }

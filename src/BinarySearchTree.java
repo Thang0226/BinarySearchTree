@@ -23,6 +23,18 @@ public class BinarySearchTree<E extends Comparable<E>> extends AbstractTree<E> {
 	}
 
 	@Override
+	public void postorder() {
+		postorder(root);
+	}
+
+	protected void postorder(TreeNode<E> node) {
+		if (node == null) return;
+		postorder(node.left);
+		postorder(node.right);
+		System.out.print(" " + node.element);
+	}
+
+	@Override
 	public boolean insert(E e) {
 		if (root == null)
 			root = createNewNode(e);
